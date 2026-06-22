@@ -296,6 +296,12 @@
     </ul>
 
     <div class="flex items-center gap-3">
+      <!-- PANIER MAIN ICON -->
+      <button onclick="toggleCart()" class="relative p-2 text-ink hover:text-moss transition-colors mr-1" aria-label="Ouvrir le panier">
+        <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+        <span id="cart-badge" class="absolute -top-0.5 -right-0.5 bg-clay text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center hidden">0</span>
+      </button>
+
       <a href="https://wa.me/212708502263?text=Bonjour%20Nutravie%2C%20je%20souhaite%20passer%20une%20commande.%20Pouvez-vous%20m%27aider%20%3F"
          target="_blank" rel="noopener"
          class="hidden sm:inline-flex items-center justify-center gap-2 bg-whats text-white text-xs sm:text-sm uppercase tracking-wide h-10 px-4 rounded-sm hover:bg-whats-dark transition-colors alignment-fix">
@@ -318,6 +324,11 @@
       <li><a href="#rituel" class="block py-1 hover:text-moss">Le Rituel</a></li>
       <li><a href="#histoire" class="block py-1 hover:text-moss">Notre Histoire</a></li>
       <li><a href="#footer" class="block py-1 hover:text-moss">Contact</a></li>
+      <li class="flex items-center gap-4 pt-2 border-t border-sand-200">
+        <button onclick="toggleCart();" class="flex items-center gap-2 text-ink hover:text-moss uppercase tracking-wide text-xs font-medium">
+          <i data-lucide="shopping-bag" class="w-5 h-5 text-clay"></i> Mon Panier <span id="mobile-cart-count"></span>
+        </button>
+      </li>
       <li>
         <a href="https://wa.me/212708502263?text=Bonjour%20Nutravie%2C%20je%20souhaite%20passer%20une%20commande.%20Pouvez-vous%20m%27aider%20%3F"
            target="_blank" rel="noopener"
@@ -498,7 +509,7 @@
             <p class="text-sm text-ink-soft leading-relaxed flex-1">Nettoie en douceur sans dessécher. Élimine impuretés et résidus de maquillage tout en préservant la barrière cutanée.</p>
             <p class="font-display text-lg text-moss">109 DH</p>
             <div class="flex flex-col sm:flex-row gap-2 pt-1">
-              <button type="button" onclick="addToCartToast('Gel Nettoyant Doux 120ml')"
+              <button type="button" onclick="addToCart({id:'gel-nettoyant', name:'Gel Nettoyant Doux 120ml', price:109, image:'cleanser.png'})"
                       class="flex-1 inline-flex items-center justify-center gap-2 border border-moss text-moss text-xs uppercase tracking-wide py-3 px-3 hover:bg-moss hover:text-white transition-colors">
                 <i data-lucide="shopping-bag" class="w-4 h-4"></i> Ajouter au panier
               </button>
@@ -513,7 +524,6 @@
 
         <!-- PRODUIT: Écran Solaire Minéral SPF50+ -->
         <article id="prod-ecran-solaire" class="flex flex-col bg-white border border-sand-300">
-          <!-- Remplacer ce visuel par : ecran-solaire-mineral-spf50.jpg -->
           <div class="relative aspect-[4/5] bg-sand-200 border-b border-sand-300 overflow-hidden">
             <img src="SPF50.png"
                  alt="Écran Solaire Minéral SPF50+ Nutravie 50ml, crème solaire hydratante visage, Maroc"
@@ -525,7 +535,7 @@
             <p class="text-sm text-ink-soft leading-relaxed flex-1">Protection minérale SPF50+ à double action&nbsp;: hydrate et protège des rayons UV en une seule étape.</p>
             <p class="font-display text-lg text-moss">149 DH</p>
             <div class="flex flex-col sm:flex-row gap-2 pt-1">
-              <button type="button" onclick="addToCartToast('Écran Solaire Minéral SPF50+ 50ml')"
+              <button type="button" onclick="addToCart({id:'ecran-solaire', name:'Écran Solaire Minéral SPF50+ 50ml', price:149, image:'SPF50.png'})"
                       class="flex-1 inline-flex items-center justify-center gap-2 border border-moss text-moss text-xs uppercase tracking-wide py-3 px-3 hover:bg-moss hover:text-white transition-colors">
                 <i data-lucide="shopping-bag" class="w-4 h-4"></i> Ajouter au panier
               </button>
@@ -540,7 +550,6 @@
 
         <!-- PRODUIT: Crème de Nuit -->
         <article id="prod-creme-nuit" class="flex flex-col bg-white border border-sand-300">
-          <!-- Remplacer ce visuel par : creme-de-nuit.jpg -->
           <div class="relative aspect-[4/5] bg-sand-200 border-b border-sand-300 overflow-hidden">
             <img src="Nightcream.png"
                  alt="Crème de Nuit Nutravie 50ml, soin réparateur nuit naturel pour le visage, Maroc"
@@ -552,7 +561,7 @@
             <p class="text-sm text-ink-soft leading-relaxed flex-1">Soin réparateur nocturne riche en actifs botaniques. Nourrit en profondeur pendant le cycle naturel de régénération de la peau.</p>
             <p class="font-display text-lg text-moss">89 DH</p>
             <div class="flex flex-col sm:flex-row gap-2 pt-1">
-              <button type="button" onclick="addToCartToast('Crème de Nuit 50ml')"
+              <button type="button" onclick="addToCart({id:'creme-nuit', name:'Crème de Nuit 50ml', price:89, image:'Nightcream.png'})"
                       class="flex-1 inline-flex items-center justify-center gap-2 border border-moss text-moss text-xs uppercase tracking-wide py-3 px-3 hover:bg-moss hover:text-white transition-colors">
                 <i data-lucide="shopping-bag" class="w-4 h-4"></i> Ajouter au panier
               </button>
@@ -586,7 +595,6 @@
 
         <!-- PRODUIT: Huile Boost Croissance -->
         <article id="prod-huile-croissance" class="flex flex-col bg-white border border-sand-300">
-          <!-- Remplacer ce visuel par : huile-boost-croissance.jpg -->
           <div class="relative aspect-[4/5] bg-sand-200 border-b border-sand-300 overflow-hidden">
             <img src="oil.jpg"
                  alt="Huile Boost Croissance Nutravie 30ml, huile naturelle stimulante pour cheveux, Maroc"
@@ -598,7 +606,7 @@
             <p class="text-sm text-ink-soft leading-relaxed flex-1">Stimule la croissance, fortifie la fibre capillaire et apaise le cuir chevelu grâce à un complexe d'huiles végétales.</p>
             <p class="font-display text-lg text-moss">75 DH</p>
             <div class="flex flex-col sm:flex-row gap-2 pt-1">
-              <button type="button" onclick="addToCartToast('Huile Boost Croissance 30ml')"
+              <button type="button" onclick="addToCart({id:'huile-croissance', name:'Huile Boost Croissance 30ml', price:75, image:'oil.jpg'})"
                       class="flex-1 inline-flex items-center justify-center gap-2 border border-moss text-moss text-xs uppercase tracking-wide py-3 px-3 hover:bg-moss hover:text-white transition-colors">
                 <i data-lucide="shopping-bag" class="w-4 h-4"></i> Ajouter au panier
               </button>
@@ -632,7 +640,6 @@
 
         <!-- PRODUIT: Déodorant Baume Vanille -->
         <article id="prod-deodorant-vanille" class="flex flex-col bg-white border border-sand-300">
-          <!-- Remplacer ce visuel par : deodorant-baume-vanille.jpg -->
           <div class="relative aspect-[4/5] bg-sand-200 border-b border-sand-300 overflow-hidden">
             <img src="Deo.png"
                  alt="Déodorant Baume Vanille Nutravie 50g, déodorant naturel sans bicarbonate, Maroc"
@@ -644,7 +651,7 @@
             <p class="text-sm text-ink-soft leading-relaxed flex-1">Neutralise les odeurs sans bloquer la transpiration. Formule baume à la vanille, douce et sans bicarbonate irritant.</p>
             <p class="font-display text-lg text-moss">82 DH</p>
             <div class="flex flex-col sm:flex-row gap-2 pt-1">
-              <button type="button" onclick="addToCartToast('Déodorant Baume Vanille 50g')"
+              <button type="button" onclick="addToCart({id:'deodorant-vanille', name:'Déodorant Baume Vanille 50g', price:82, image:'Deo.png'})"
                       class="flex-1 inline-flex items-center justify-center gap-2 border border-moss text-moss text-xs uppercase tracking-wide py-3 px-3 hover:bg-moss hover:text-white transition-colors">
                 <i data-lucide="shopping-bag" class="w-4 h-4"></i> Ajouter au panier
               </button>
@@ -697,7 +704,7 @@
               <h4 class="font-display text-lg text-ink">Gel Nettoyant Doux <span class="text-ink-soft text-sm font-body">120ml</span></h4>
               <p class="font-display text-base text-moss">109 DH</p>
               <div class="flex flex-col sm:flex-row gap-2 pt-2 mt-auto">
-                <button type="button" onclick="addToCartToast('Gel Nettoyant Doux 120ml')"
+                <button type="button" onclick="addToCart({id:'gel-nettoyant', name:'Gel Nettoyant Doux 120ml', price:109, image:'gel.png'})"
                         class="flex-1 inline-flex items-center justify-center gap-2 border border-moss text-moss text-xs uppercase tracking-wide py-2.5 px-3 hover:bg-moss hover:text-white transition-colors">
                   <i data-lucide="shopping-bag" class="w-4 h-4"></i> Panier
                 </button>
@@ -732,7 +739,7 @@
               <p class="text-xs text-ink-soft -mt-1">Action double : hydratation + protection UV</p>
               <p class="font-display text-base text-moss">149 DH</p>
               <div class="flex flex-col sm:flex-row gap-2 pt-2 mt-auto">
-                <button type="button" onclick="addToCartToast('Écran Solaire Minéral SPF50+ 50ml')"
+                <button type="button" onclick="addToCart({id:'ecran-solaire', name:'Écran Solaire Minéral SPF50+ 50ml', price:149, image:'ecran.png'})"
                         class="flex-1 inline-flex items-center justify-center gap-2 border border-moss text-moss text-xs uppercase tracking-wide py-2.5 px-3 hover:bg-moss hover:text-white transition-colors">
                   <i data-lucide="shopping-bag" class="w-4 h-4"></i> Panier
                 </button>
@@ -766,7 +773,7 @@
               <h4 class="font-display text-lg text-ink">Crème de Nuit <span class="text-ink-soft text-sm font-body">50ml</span></h4>
               <p class="font-display text-base text-moss">89 DH</p>
               <div class="flex flex-col sm:flex-row gap-2 pt-2 mt-auto">
-                <button type="button" onclick="addToCartToast('Crème de Nuit 50ml')"
+                <button type="button" onclick="addToCart({id:'creme-nuit', name:'Crème de Nuit 50ml', price:89, image:'nuit.png'})"
                         class="flex-1 inline-flex items-center justify-center gap-2 border border-moss text-moss text-xs uppercase tracking-wide py-2.5 px-3 hover:bg-moss hover:text-white transition-colors">
                   <i data-lucide="shopping-bag" class="w-4 h-4"></i> Panier
                 </button>
@@ -789,7 +796,6 @@
     <div class="max-w-7xl mx-auto px-5 sm:px-8 grid md:grid-cols-12 gap-10 md:gap-14 items-center">
 
       <div class="md:col-span-5 md:order-2">
-        <!-- Remplacer ce visuel par une photo de l'atelier, des ingrédients ou de la fondatrice/du fondateur : nutravie-histoire.jpg -->
         <div class="relative aspect-[4/5] bg-sand-200 border border-sand-300 overflow-hidden">
           <img src="grid3.png"
                alt="L'histoire de Nutravie, cosmétique botanique marocaine fabriquée avec soin"
@@ -802,7 +808,6 @@
         <div class="relative z-10">
           <p class="text-xs uppercase tracking-[0.25em] text-clay font-medium mb-3">N°05 — Catalogue Nutravie</p>
           <h2 class="font-display text-3xl sm:text-4xl text-ink mb-6">Notre Histoire</h2>
-          <!-- TEXTE À PERSONNALISER : remplacez ce paragraphe par votre vraie histoire (qui a créé Nutravie, pourquoi, où sont fabriqués les produits). -->
           <p class="text-ink-soft leading-relaxed mb-4 max-w-xl">Nutravie est née d'une conviction simple&nbsp;: une routine de soin efficace n'a pas besoin d'être compliquée. Plutôt que de multiplier les références, nous avons choisi de formuler peu de produits, mais de les penser jusqu'au moindre détail.</p>
           <p class="text-ink-soft leading-relaxed max-w-xl">Chaque soin Nutravie est pensé pour s'intégrer dans un rituel simple, du matin au soir, avec des actifs d'origine végétale et sans ingrédients superflus. Nous restons une marque à taille humaine, joignable directement par WhatsApp pour répondre à vos questions avant et après votre commande.</p>
         </div>
@@ -812,7 +817,6 @@
   </section>
 
   <!-- =================== AVIS CLIENTS =================== -->
-  <!-- IMPORTANT : remplacez les 3 blocs ci-dessous par vos vrais avis clients (nom, note, texte) dès que vous me les transmettez. Ne jamais publier d'avis inventés. -->
   <section id="avis" class="py-20 sm:py-28 bg-sand-50 border-y border-sand-300">
     <div class="max-w-7xl mx-auto px-5 sm:px-8">
       <div class="text-center mb-14">
@@ -930,8 +934,76 @@
   <i data-lucide="message-circle" class="w-6 h-6"></i>
 </a>
 
+<!-- =================== SLIDE-OUT CART PANEL DRAWER =================== -->
+<div id="cart-drawer" class="fixed inset-0 z-[100] overflow-hidden hidden" role="dialog" aria-modal="true">
+  <div class="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity" onclick="toggleCart()"></div>
+  <div class="absolute inset-y-0 right-0 max-w-md w-full bg-sand-100 shadow-2xl flex flex-col h-full transform transition-transform">
+    
+    <!-- Header -->
+    <div class="p-6 border-b border-sand-300 bg-white flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <i data-lucide="shopping-bag" class="w-5 h-5 text-moss"></i>
+        <h3 class="font-display italic text-2xl text-ink">Votre Panier</h3>
+      </div>
+      <button onclick="toggleCart()" class="text-ink-soft hover:text-ink text-3xl font-light p-1" aria-label="Fermer le panier">&times;</button>
+    </div>
+
+    <!-- Scrollable Basket Area -->
+    <div id="cart-items-list" class="flex-1 overflow-y-auto p-6 space-y-4">
+      <!-- Dynamic updates injected here -->
+    </div>
+
+    <!-- Form and Total Calculations -->
+    <div id="cart-summary-area" class="p-6 border-t border-sand-300 bg-white">
+      <div class="space-y-2 text-sm text-ink mb-5 pb-4 border-b border-sand-200">
+        <div class="flex justify-between">
+          <span class="text-ink-soft">Sous-total:</span>
+          <span id="cart-subtotal" class="font-medium">0 DH</span>
+        </div>
+        <div class="flex justify-between items-center">
+          <span class="text-ink-soft">Frais de livraison:</span>
+          <span id="cart-shipping" class="font-medium text-clay">30 DH</span>
+        </div>
+        <div class="flex justify-between font-display text-lg text-ink pt-2 font-semibold">
+          <span>Total:</span>
+          <span id="cart-total" class="text-moss">0 DH</span>
+        </div>
+      </div>
+
+      <!-- Cash On Delivery Form Details -->
+      <form id="cart-checkout-form" onsubmit="submitCartOrder(event)" class="space-y-2.5">
+        <div>
+          <label class="sr-only" for="cart-name">Nom complet</label>
+          <input type="text" id="cart-name" placeholder="Nom Complet *" required 
+                 class="w-full p-3 bg-sand-50 border border-sand-300 text-sm focus:outline-none focus:border-moss transition-colors">
+        </div>
+        <div>
+          <label class="sr-only" for="cart-phone">Téléphone</label>
+          <input type="tel" id="cart-phone" placeholder="Numéro de Téléphone *" required 
+                 class="w-full p-3 bg-sand-50 border border-sand-300 text-sm focus:outline-none focus:border-moss transition-colors">
+        </div>
+        <div>
+          <label class="sr-only" for="cart-address">Adresse</label>
+          <input type="text" id="cart-address" placeholder="Adresse complète de Livraison *" required 
+                 class="w-full p-3 bg-sand-50 border border-sand-300 text-sm focus:outline-none focus:border-moss transition-colors">
+        </div>
+        <div>
+          <label class="sr-only" for="cart-city">Ville</label>
+          <input type="text" id="cart-city" placeholder="Ville *" required 
+                 class="w-full p-3 bg-sand-50 border border-sand-300 text-sm focus:outline-none focus:border-moss transition-colors">
+        </div>
+        
+        <button type="submit" class="w-full bg-moss text-white py-4 uppercase tracking-widest text-xs font-semibold hover:bg-moss-dark transition-colors mt-3 shadow-md flex items-center justify-center gap-2">
+          <i data-lucide="message-circle" class="w-4 h-4"></i> Confirmer la commande via WhatsApp
+        </button>
+      </form>
+    </div>
+
+  </div>
+</div>
+
 <!-- =================== TOAST (Add to cart feedback) =================== -->
-<div data-toast id="toast" class="fixed bottom-24 left-1/2 -translate-x-1/2 translate-y-20 opacity-0 bg-ink text-sand-50 text-sm px-5 py-3 max-w-[90vw] sm:max-w-sm text-center z-[60] shadow-lg" role="status" aria-live="polite"></div>
+<div data-toast id="toast" class="fixed bottom-24 left-1/2 -translate-x-1/2 translate-y-20 opacity-0 bg-ink text-sand-50 text-sm px-5 py-3 max-w-[90vw] sm:max-w-sm text-center z-[110] shadow-lg" role="status" aria-live="polite"></div>
 
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 <script>
@@ -986,11 +1058,6 @@
     }, 3200);
   }
 
-  // "Add to cart" — no cart backend yet, so guide people to the working WhatsApp channel
-  function addToCartToast(productName) {
-    showToast('Panier en ligne bientôt disponible — commandez "' + productName + '" via WhatsApp pour une réponse immédiate.');
-  }
-
   // Newsletter (front-end only placeholder — connect to a real provider later)
   const newsletterForm = document.getElementById('newsletter-form');
   const newsletterMessage = document.getElementById('newsletter-message');
@@ -999,6 +1066,152 @@
     newsletterMessage.classList.remove('hidden');
     newsletterForm.reset();
   });
+
+  // ============================================================
+  // CORE WEB BASKET CORE LOGIC ENGINE
+  // ============================================================
+  let cart = [];
+
+  function toggleCart() {
+    const drawer = document.getElementById('cart-drawer');
+    drawer.classList.toggle('hidden');
+  }
+
+  function addToCart(product) {
+    const existingItem = cart.find(item => item.id === product.id);
+    
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      cart.push({ ...product, quantity: 1 });
+    }
+    
+    updateCartUI();
+    showToast(`"${product.name}" a été ajouté au panier.`);
+    
+    // Auto-open drawer when item is chosen
+    document.getElementById('cart-drawer').classList.remove('hidden');
+  }
+
+  function updateQuantity(id, change) {
+    const item = cart.find(item => item.id === id);
+    if (!item) return;
+    
+    item.quantity += change;
+    if (item.quantity <= 0) {
+      cart = cart.filter(item => item.id !== id);
+    }
+    updateCartUI();
+  }
+
+  function updateCartUI() {
+    const itemsContainer = document.getElementById('cart-items-list');
+    const badge = document.getElementById('cart-badge');
+    const mobileBadge = document.getElementById('mobile-cart-count');
+    
+    // Calculate total distinct item quantities
+    const totalItemsCount = cart.reduce((total, current) => total + current.quantity, 0);
+    
+    // Update structural display item counts
+    if (totalItemsCount > 0) {
+      badge.innerText = totalItemsCount;
+      badge.classList.remove('hidden');
+      mobileBadge.innerText = `(${totalItemsCount})`;
+    } else {
+      badge.classList.add('hidden');
+      mobileBadge.innerText = '';
+    }
+
+    if (cart.length === 0) {
+      itemsContainer.innerHTML = `
+        <div class="text-center py-12 flex flex-col items-center justify-center gap-3">
+          <i data-lucide="shopping-bag" class="w-10 h-10 text-sand-300"></i>
+          <p class="text-sand-600 text-sm">Votre panier est encore vide.</p>
+        </div>
+      `;
+      document.getElementById('cart-subtotal').innerText = '0 DH';
+      document.getElementById('cart-shipping').innerText = '30 DH';
+      document.getElementById('cart-total').innerText = '0 DH';
+      lucide.createIcons();
+      return;
+    }
+    
+    let subtotal = 0;
+    itemsContainer.innerHTML = '';
+    
+    cart.forEach(item => {
+      subtotal += item.price * item.quantity;
+      itemsContainer.innerHTML += `
+        <div class="flex items-center gap-4 bg-white p-3 border border-sand-200 shadow-sm relative group">
+          <img src="${item.image}" alt="${item.name}" class="w-16 h-20 object-cover bg-sand-100 border border-sand-200 flex-shrink-0">
+          <div class="flex-1 min-w-0">
+            <h4 class="text-sm font-medium text-ink truncate">${item.name}</h4>
+            <p class="text-xs text-clay font-medium mt-0.5">${item.price} DH</p>
+            <div class="flex items-center gap-1 mt-2">
+              <button type="button" onclick="updateQuantity('${item.id}', -1)" class="w-7 h-7 bg-sand-50 border border-sand-300 text-xs hover:bg-sand-200 transition-colors flex items-center justify-center font-medium">-</button>
+              <span class="w-8 text-center text-xs font-medium text-ink">${item.quantity}</span>
+              <button type="button" onclick="updateQuantity('${item.id}', 1)" class="w-7 h-7 bg-sand-50 border border-sand-300 text-xs hover:bg-sand-200 transition-colors flex items-center justify-center font-medium">+</button>
+            </div>
+          </div>
+          <div class="text-right flex flex-col justify-between items-end h-full">
+            <p class="text-sm font-semibold text-moss">${item.price * item.quantity} DH</p>
+          </div>
+        </div>
+      `;
+    });
+    
+    // Delivery Threshold Rule: 30 DH shipping fee unless subtotal >= 399 DH
+    const shippingFee = subtotal >= 399 ? 0 : 30;
+    const total = subtotal + shippingFee;
+    
+    document.getElementById('cart-subtotal').innerText = `${subtotal} DH`;
+    document.getElementById('cart-shipping').innerText = shippingFee === 0 ? 'Gratuite' : `${shippingFee} DH`;
+    document.getElementById('cart-total').innerText = `${total} DH`;
+    
+    // Refresh newly injected lucide vector indicators
+    lucide.createIcons();
+  }
+
+  function submitCartOrder(event) {
+    event.preventDefault();
+    
+    if (cart.length === 0) {
+      alert("Votre panier est vide!");
+      return;
+    }
+    
+    const name = document.getElementById('cart-name').value;
+    const phone = document.getElementById('cart-phone').value;
+    const address = document.getElementById('cart-address').value;
+    const city = document.getElementById('cart-city').value;
+    
+    // Compile Products List
+    let productLines = '';
+    let subtotal = 0;
+    cart.forEach(item => {
+      productLines += `- ${item.name} (x${item.quantity}) : ${item.price * item.quantity} DH\n`;
+      subtotal += item.price * item.quantity;
+    });
+    
+    const shippingFee = subtotal >= 399 ? 0 : 30;
+    const total = subtotal + shippingFee;
+    
+    // Generate WhatsApp Text Formatting Block
+    const message = `Bonjour Nutravie! ✨ Nouvelle Commande Site Web 🛒\n\n` +
+                    `*Détails de la commande :*\n${productLines}\n` +
+                    `*Sous-total :* ${subtotal} DH\n` +
+                    `*Livraison :* ${shippingFee === 0 ? 'Gratuite' : '30 DH'}\n` +
+                    `*Total à payer :* ${total} DH\n\n` +
+                    `*Informations de Livraison :*\n` +
+                    `👤 *Nom complet :* ${name}\n` +
+                    `📞 *Téléphone :* ${phone}\n` +
+                    `📍 *Adresse :* ${address}\n` +
+                    `🏙️ *Ville :* ${city}\n\n` +
+                    `Paiement : Échange en espèces à la livraison (COD) 🤝`;
+                    
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/212708502263?text=${encodedMessage}`, '_blank');
+  }
 </script>
 
 </body>
