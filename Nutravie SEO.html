@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============================================================
+     PRIMARY SEO META TAGS
+     Edit the domain (https://www.nutravie.ma) below if different.
+     ============================================================ -->
+<title>Nutravie | Soins Naturels Visage, Cheveux & Corps — Livraison Partout au Maroc</title>
+<meta name="description" content="Nutravie : cosmétique botanique marocaine. Gel nettoyant doux, écran solaire minéral SPF50+, crème de nuit, huile croissance cheveux et déodorant naturel. Commande directe par WhatsApp, livraison partout au Maroc.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Nutravie">
+<link rel="canonical" href="https://www.nutravie.ma/">
+
+<!-- Hreflang: self-referencing now; ar-MA reserved for a future Arabic version -->
+<link rel="alternate" hreflang="fr-MA" href="https://www.nutravie.ma/">
+<link rel="alternate" hreflang="x-default" href="https://www.nutravie.ma/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nutravie">
+<meta property="og:title" content="Nutravie | Soins Naturels Visage, Cheveux & Corps — Maroc">
+<meta property="og:description" content="Cosmétique botanique marocaine : nettoyant, écran solaire minéral, crème de nuit, soins cheveux et corps. Commande directe par WhatsApp, livraison partout au Maroc.">
+<meta property="og:url" content="https://www.nutravie.ma/">
+<meta property="og:locale" content="fr_MA">
+<meta property="og:image" content="https://www.nutravie.ma/images/nutravie-og-cover.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nutravie | Soins Naturels Visage, Cheveux & Corps — Maroc">
+<meta name="twitter:description" content="Cosmétique botanique marocaine. Commande directe par WhatsApp, livraison partout au Maroc.">
+<meta name="twitter:image" content="https://www.nutravie.ma/images/nutravie-og-cover.jpg">
+
+<meta name="theme-color" content="#454F3D">
+
+<!-- Favicon: simple leaf glyph, swap for a real logo file later -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23F7F3EB'/%3E%3Cpath d='M32 50C32 38 24 30 18 22' stroke='%23454F3D' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3Cpath d='M18 22c-2-4 0-8 6-9' stroke='%23454F3D' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          sand: { 50: '#FBF8F2', 100: '#F7F3EB', 200: '#EFE6D6', 300: '#DED2BC' },
+          ink: { DEFAULT: '#272420', soft: '#6E6457' },
+          moss: { DEFAULT: '#454F3D', dark: '#313828', light: '#5C6852' },
+          clay: { DEFAULT: '#AE7A4C', light: '#C99A6F' },
+          whats: { DEFAULT: '#2BAA52', dark: '#218A42' }
+        },
+        fontFamily: {
+          display: ['Fraunces', 'serif'],
+          body: ['"Work Sans"', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+  body { font-family: 'Work Sans', sans-serif; }
+  .font-display { font-family: 'Fraunces', serif; }
+  ::selection { background: #454F3D; color: #F7F3EB; }
+  :focus-visible { outline: 2px solid #454F3D; outline-offset: 3px; }
+  .skip-link {
+    position: absolute; left: -9999px; top: 0; background: #454F3D; color: #fff;
+    padding: 0.75rem 1.25rem; z-index: 100;
+  }
+  .skip-link:focus { left: 0.5rem; top: 0.5rem; }
+  .ghost-number {
+    font-family: 'Fraunces', serif;
+    color: #454F3D;
+    opacity: 0.06;
+    line-height: 1;
+    user-select: none;
+  }
+  .ritual-line {
+    background-image: linear-gradient(to bottom, #AE7A4C 0 6px, transparent 6px 14px);
+    background-size: 2px 14px;
+    background-repeat: repeat-y;
+    width: 2px;
+  }
+  .mobile-nav { transition: max-height 0.3s ease, opacity 0.25s ease; }
+  [data-toast] { transition: transform 0.35s ease, opacity 0.35s ease; }
+  @keyframes whats-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(43, 170, 82, 0.45); }
+    50% { box-shadow: 0 0 0 10px rgba(43, 170, 82, 0); }
+  }
+  .whats-float { animation: whats-pulse 2.6s ease-out infinite; }
+  @media (prefers-reduced-motion: reduce) {
+    .whats-float { animation: none; }
+  }
+</style>
+
+<!-- ============================================================
+     JSON-LD STRUCTURED DATA
+     Organization (online-only, nationwide) + 5 Products
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.nutravie.ma/#organization",
+      "name": "Nutravie",
+      "alternateName": "Nutravie Cosmétiques Naturels",
+      "url": "https://www.nutravie.ma/",
+      "logo": "https://www.nutravie.ma/images/nutravie-logo.png",
+      "image": "https://www.nutravie.ma/images/nutravie-og-cover.jpg",
+      "description": "Marque marocaine de cosmétique botanique vendant en ligne des soins naturels pour le visage, les cheveux et le corps, avec livraison partout au Maroc.",
+      "email": "nutra.vie88@gmail.com",
+      "areaServed": { "@type": "Country", "name": "Morocco" },
+      "knowsLanguage": ["fr", "ar"],
+      "paymentAccepted": "Cash on Delivery",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "Service Client",
+          "telephone": "+212708502263",
+          "email": "nutra.vie88@gmail.com",
+          "areaServed": "MA",
+          "availableLanguage": ["French", "Arabic"]
+        }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.nutravie.ma/#gel-nettoyant-doux",
+      "name": "Gel Nettoyant Doux 120ml",
+      "image": "https://www.nutravie.ma/images/produits/gel-nettoyant-doux.jpg",
+      "description": "Gel nettoyant visage naturel qui élimine impuretés et résidus de maquillage sans dessécher la peau, pour tous types de peau.",
+      "sku": "NUTRA-FACE-001",
+      "brand": { "@type": "Brand", "name": "Nutravie" },
+      "category": "Soins Visage",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "MAD",
+        "price": "109",
+        "availability": "https://schema.org/InStock",
+        "areaServed": "MA",
+        "url": "https://www.nutravie.ma/#visage",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "MA" },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 2, "unitCode": "DAY" }
+          }
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.nutravie.ma/#ecran-solaire-mineral",
+      "name": "Écran Solaire Minéral SPF50+ 50ml",
+      "image": "https://www.nutravie.ma/images/produits/ecran-solaire-mineral-spf50.jpg",
+      "description": "Écran solaire minéral SPF50+ à double action qui hydrate et protège des rayons UV en une seule étape, pour un usage quotidien.",
+      "sku": "NUTRA-FACE-002",
+      "brand": { "@type": "Brand", "name": "Nutravie" },
+      "category": "Soins Visage",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "MAD",
+        "price": "149",
+        "availability": "https://schema.org/InStock",
+        "areaServed": "MA",
+        "url": "https://www.nutravie.ma/#visage",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "MA" },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 2, "unitCode": "DAY" }
+          }
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.nutravie.ma/#creme-de-nuit",
+      "name": "Crème de Nuit 50ml",
+      "image": "https://www.nutravie.ma/images/produits/creme-de-nuit.jpg",
+      "description": "Crème de nuit réparatrice riche en actifs botaniques, formulée pour nourrir la peau en profondeur pendant son cycle naturel de régénération.",
+      "sku": "NUTRA-FACE-003",
+      "brand": { "@type": "Brand", "name": "Nutravie" },
+      "category": "Soins Visage",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "MAD",
+        "price": "89",
+        "availability": "https://schema.org/InStock",
+        "areaServed": "MA",
+        "url": "https://www.nutravie.ma/#visage",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "MA" },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 2, "unitCode": "DAY" }
+          }
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.nutravie.ma/#huile-boost-croissance",
+      "name": "Huile Boost Croissance 30ml",
+      "image": "https://www.nutravie.ma/images/produits/huile-boost-croissance.jpg",
+      "description": "Huile capillaire naturelle à base d'un complexe d'huiles végétales qui stimule la croissance, fortifie la fibre capillaire et apaise le cuir chevelu.",
+      "sku": "NUTRA-HAIR-001",
+      "brand": { "@type": "Brand", "name": "Nutravie" },
+      "category": "Soins Cheveux",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "MAD",
+        "price": "75",
+        "availability": "https://schema.org/InStock",
+        "areaServed": "MA",
+        "url": "https://www.nutravie.ma/#cheveux",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "MA" },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 2, "unitCode": "DAY" }
+          }
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.nutravie.ma/#deodorant-baume-vanille",
+      "name": "Déodorant Baume Vanille 50g",
+      "image": "https://www.nutravie.ma/images/produits/deodorant-baume-vanille.jpg",
+      "description": "Déodorant naturel en baume à la vanille, sans bicarbonate irritant, qui neutralise les odeurs sans bloquer la transpiration, adapté aux peaux sensibles.",
+      "sku": "NUTRA-BODY-001",
+      "brand": { "@type": "Brand", "name": "Nutravie" },
+      "category": "Soins Corps",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "MAD",
+        "price": "82",
+        "availability": "https://schema.org/InStock",
+        "areaServed": "MA",
+        "url": "https://www.nutravie.ma/#corps"
+      }
+    }
+  ]
+}
+</script>
+
+</head>
+
+<body class="bg-sand-100 text-ink font-body antialiased">
+<a href="#main" class="skip-link">Aller au contenu principal</a>
+
+<!-- =================== ANNOUNCEMENT BAR =================== -->
+<div class="bg-moss text-sand-50 text-center text-xs sm:text-sm tracking-wide py-2.5 px-4 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+  <span>Livraison 24-48H partout au Maroc</span>
+  <span class="hidden sm:inline text-sand-300">·</span>
+  <span>Paiement à la livraison disponible</span>
+  <span class="hidden sm:inline text-sand-300">·</span>
+  <span>Gratuite dès 300 DH</span>
+</div>
+
+<!-- =================== HEADER / NAV =================== -->
+<header class="sticky top-0 z-50 bg-sand-100/95 backdrop-blur-sm border-b border-sand-300">
+  <nav class="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between h-20" aria-label="Navigation principale">
+    <a href="#home" class="font-display italic text-2xl sm:text-3xl text-ink tracking-tight">Nutravie</a>
+
+    <ul class="hidden md:flex items-center gap-7 text-sm uppercase tracking-[0.1em] text-ink-soft">
+      <li><a href="#visage" class="hover:text-moss transition-colors">Visage</a></li>
+      <li><a href="#cheveux" class="hover:text-moss transition-colors">Cheveux</a></li>
+      <li><a href="#corps" class="hover:text-moss transition-colors">Corps</a></li>
+      <li><a href="#rituel" class="hover:text-moss transition-colors">Le Rituel</a></li>
+      <li><a href="#histoire" class="hover:text-moss transition-colors">Notre Histoire</a></li>
+      <li><a href="#footer" class="hover:text-moss transition-colors">Contact</a></li>
+    </ul>
+
+    <div class="flex items-center gap-3">
+      <a href="https://wa.me/212708502263?text=Bonjour%20Nutravie%2C%20je%20souhaite%20passer%20une%20commande.%20Pouvez-vous%20m%27aider%20%3F"
+         target="_blank" rel="noopener"
+         class="hidden sm:inline-flex items-center gap-2 bg-whats text-white text-xs sm:text-sm uppercase tracking-wide py-2.5 px-4 hover:bg-whats-dark transition-colors">
+        <i data-lucide="message-circle" class="w-4 h-4" aria-hidden="true"></i>
+        WhatsApp
+      </a>
+      <button id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu"
+              class="md:hidden p-2 text-ink">
+        <i data-lucide="menu" id="menu-icon-open" class="w-6 h-6"></i>
+        <i data-lucide="x" id="menu-icon-close" class="w-6 h-6 hidden"></i>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobile-menu" class="mobile-nav md:hidden overflow-hidden max-h-0 opacity-0 bg-sand-100 border-t border-sand-300">
+    <ul class="flex flex-col px-6 py-4 gap-4 text-sm uppercase tracking-wide text-ink-soft">
+      <li><a href="#visage" class="block py-1 hover:text-moss">Visage</a></li>
+      <li><a href="#cheveux" class="block py-1 hover:text-moss">Cheveux</a></li>
+      <li><a href="#corps" class="block py-1 hover:text-moss">Corps</a></li>
+      <li><a href="#rituel" class="block py-1 hover:text-moss">Le Rituel</a></li>
+      <li><a href="#histoire" class="block py-1 hover:text-moss">Notre Histoire</a></li>
+      <li><a href="#footer" class="block py-1 hover:text-moss">Contact</a></li>
+      <li>
+        <a href="https://wa.me/212708502263?text=Bonjour%20Nutravie%2C%20je%20souhaite%20passer%20une%20commande.%20Pouvez-vous%20m%27aider%20%3F"
+           target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 bg-whats text-white text-xs uppercase tracking-wide py-2.5 px-4 mt-1">
+          <i data-lucide="message-circle" class="w-4 h-4"></i> Commander sur WhatsApp
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- =================== HERO =================== -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 py-16 sm:py-24 grid md:grid-cols-12 gap-10 md:gap-6 items-center">
+
+      <div class="md:col-span-5 relative">
+        <div class="hidden md:block absolute -left-6 top-1 ritual-line h-24"></div>
+        <p class="text-xs uppercase tracking-[0.25em] text-clay font-medium mb-5">Cosmétique Botanique · Maroc</p>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-[3.2rem] leading-[1.08] text-ink mb-6">
+          Des rituels botaniques pour votre peau, vos cheveux et votre corps
+        </h1>
+        <p class="text-ink-soft text-base sm:text-lg leading-relaxed mb-9 max-w-md">
+          Nutravie formule des soins naturels au Maroc&nbsp;: nettoyant doux, écran solaire minéral, crème de nuit et soins capillaires. Des résultats visibles, livrés partout au pays.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#visage" class="inline-flex items-center gap-2 bg-moss text-white text-sm uppercase tracking-wide py-3.5 px-7 hover:bg-moss-dark transition-colors">
+            Découvrir les soins
+          </a>
+          <a href="https://wa.me/212708502263?text=Bonjour%20Nutravie%2C%20je%20souhaite%20passer%20une%20commande.%20Pouvez-vous%20m%27aider%20%3F"
+             target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 border border-ink/20 text-ink text-sm uppercase tracking-wide py-3.5 px-7 hover:border-moss hover:text-moss transition-colors">
+            <i data-lucide="message-circle" class="w-4 h-4"></i> Commander sur WhatsApp
+          </a>
+        </div>
+
+        <ul class="flex flex-wrap gap-x-6 gap-y-2 mt-7 text-xs text-ink-soft">
+          <li class="flex items-center gap-1.5"><i data-lucide="truck" class="w-4 h-4 text-moss"></i> Livraison 24-48h</li>
+          <li class="flex items-center gap-1.5"><i data-lucide="wallet" class="w-4 h-4 text-moss"></i> Paiement à la livraison</li>
+          <li class="flex items-center gap-1.5"><i data-lucide="leaf" class="w-4 h-4 text-moss"></i> 100% Maroc</li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-7">
+        <!-- Remplacer ce visuel par une photo lifestyle de la marque (ex: nutravie-hero.jpg) -->
+        <div class="relative aspect-[4/3] sm:aspect-[16/10] bg-sand-200 border border-sand-300 overflow-hidden">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Crect width='800' height='500' fill='%23EFE6D6'/%3E%3Cg stroke='%23454F3D' stroke-width='2' fill='none' stroke-linecap='round' opacity='0.6'%3E%3Cpath d='M400 430 C400 330 350 260 300 200'/%3E%3Cpath d='M400 410 C400 320 460 250 520 190'/%3E%3Cpath d='M300 200 C285 170 290 145 320 130'/%3E%3Cpath d='M520 190 C540 165 535 140 505 125'/%3E%3Ccircle cx='400' cy='130' r='7' fill='%23454F3D'/%3E%3C/g%3E%3C/svg%3E"
+               alt="Photographie lifestyle de la gamme de soins naturels Nutravie, cosmétique botanique marocaine"
+               class="w-full h-full object-cover" width="800" height="500">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =================== TRUST BADGES =================== -->
+  <section class="border-y border-sand-300 bg-sand-50" aria-label="Engagements Nutravie">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 divide-y sm:divide-y-0 lg:divide-x divide-sand-300">
+
+      <div class="flex items-center gap-4 py-5 sm:py-0 lg:px-5 sm:justify-center lg:justify-start">
+        <i data-lucide="heart" class="w-6 h-6 text-moss flex-shrink-0" aria-hidden="true"></i>
+        <div>
+          <p class="font-display text-base text-ink">Sans Cruauté Animale</p>
+          <p class="text-xs text-ink-soft">Jamais testé sur les animaux</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 py-5 sm:py-0 lg:px-5 sm:justify-center lg:justify-start">
+        <i data-lucide="shield-check" class="w-6 h-6 text-moss flex-shrink-0" aria-hidden="true"></i>
+        <div>
+          <p class="font-display text-base text-ink">Testé Dermatologiquement</p>
+          <p class="text-xs text-ink-soft">Formules validées pour tous types de peau</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 py-5 sm:py-0 lg:px-5 sm:justify-center lg:justify-start">
+        <i data-lucide="leaf" class="w-6 h-6 text-moss flex-shrink-0" aria-hidden="true"></i>
+        <div>
+          <p class="font-display text-base text-ink">Origine Botanique</p>
+          <p class="text-xs text-ink-soft">Actifs d'origine végétale, sans superflu</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 py-5 sm:py-0 lg:px-5 sm:justify-center lg:justify-start">
+        <i data-lucide="wallet" class="w-6 h-6 text-moss flex-shrink-0" aria-hidden="true"></i>
+        <div>
+          <p class="font-display text-base text-ink">Paiement à la Livraison</p>
+          <p class="text-xs text-ink-soft">Payez en espèces à réception</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 py-5 sm:py-0 lg:px-5 sm:justify-center lg:justify-start">
+        <i data-lucide="truck" class="w-6 h-6 text-moss flex-shrink-0" aria-hidden="true"></i>
+        <div>
+          <p class="font-display text-base text-ink">Livraison 24-48h</p>
+          <p class="text-xs text-ink-soft">Partout au Maroc</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =================== CATÉGORIES (navigation visuelle) =================== -->
+  <section class="py-16 sm:py-20" aria-label="Catégories de produits">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="text-center mb-10">
+        <p class="text-xs uppercase tracking-[0.25em] text-clay font-medium mb-3">Explorez Nutravie</p>
+        <h2 class="font-display text-2xl sm:text-3xl text-ink">Trouvez votre soin par catégorie</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+
+        <a href="#visage" class="group relative block aspect-[4/5] sm:aspect-[3/4] overflow-hidden bg-sand-200 border border-sand-300">
+          <!-- Remplacer par : categorie-visage.jpg -->
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23EFE6D6'/%3E%3Ccircle cx='200' cy='220' r='70' fill='none' stroke='%23454F3D' stroke-width='2'/%3E%3Cpath d='M160 260c10 20 70 20 80 0' stroke='%23454F3D' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"
+               alt="Catégorie Soins Visage Nutravie — nettoyant, écran solaire et crème de nuit naturels, Maroc"
+               class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" width="400" height="500">
+          <div class="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-6">
+            <p class="font-display text-xl text-white">Soins Visage</p>
+            <p class="text-sand-200 text-xs uppercase tracking-wide mt-1">3 essentiels</p>
+          </div>
+        </a>
+
+        <a href="#cheveux" class="group relative block aspect-[4/5] sm:aspect-[3/4] overflow-hidden bg-sand-200 border border-sand-300">
+          <!-- Remplacer par : categorie-cheveux.jpg -->
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23EFE6D6'/%3E%3Cpath d='M200 350c-50-30-50-90-30-140 10 50 40 70 30 140Z' fill='none' stroke='%23454F3D' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M200 350c50-30 50-90 30-140-10 50-40 70-30 140Z' fill='none' stroke='%23454F3D' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E"
+               alt="Catégorie Soins Cheveux Nutravie — huile naturelle stimulante croissance, Maroc"
+               class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" width="400" height="500">
+          <div class="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-6">
+            <p class="font-display text-xl text-white">Soins Cheveux</p>
+            <p class="text-sand-200 text-xs uppercase tracking-wide mt-1">1 essentiel</p>
+          </div>
+        </a>
+
+        <a href="#corps" class="group relative block aspect-[4/5] sm:aspect-[3/4] overflow-hidden bg-sand-200 border border-sand-300">
+          <!-- Remplacer par : categorie-corps.jpg -->
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23EFE6D6'/%3E%3Crect x='160' y='190' width='80' height='150' rx='10' fill='none' stroke='%23454F3D' stroke-width='2'/%3E%3Crect x='178' y='160' width='44' height='35' rx='6' fill='none' stroke='%23454F3D' stroke-width='2'/%3E%3C/svg%3E"
+               alt="Catégorie Soins Corps Nutravie — déodorant naturel baume vanille, Maroc"
+               class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" width="400" height="500">
+          <div class="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-6">
+            <p class="font-display text-xl text-white">Soins Corps</p>
+            <p class="text-sand-200 text-xs uppercase tracking-wide mt-1">1 essentiel</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== SOINS VISAGE =================== -->
+  <section id="visage" class="py-20 sm:py-28">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+      <div class="relative mb-14">
+        <span class="ghost-number absolute -left-2 sm:-left-4 -top-10 sm:-top-16 text-[6rem] sm:text-[9rem] select-none" aria-hidden="true">01</span>
+        <div class="relative z-10">
+          <p class="text-xs uppercase tracking-[0.25em] text-clay font-medium mb-3">N°01 — Catalogue Nutravie</p>
+          <h2 class="font-display text-3xl sm:text-4xl text-ink">Soins Visage</h2>
+          <p class="text-ink-soft mt-3 max-w-xl">Nettoyant, protection solaire et réparation nocturne&nbsp;: trois gestes essentiels pour une peau saine, formulés pour tous types de peau.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- PRODUIT: Gel Nettoyant Doux -->
+        <article id="prod-gel-nettoyant" class="flex flex-col bg-white border border-sand-300">
+          <!-- Remplacer ce visuel par : gel-nettoyant-doux.jpg -->
+          <div class="relative aspect-[4/5] bg-sand-200 border-b border-sand-300 overflow-hidden">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23EFE6D6'/%3E%3Cg stroke='%23454F3D' stroke-width='2' fill='none' stroke-linecap='round'%3E%3Cpath d='M200 380 C200 300 170 260 150 220'/%3E%3Cpath d='M200 360 C200 280 230 240 250 200'/%3E%3Cpath d='M150 220 C140 200 145 180 165 170'/%3E%3Cpath d='M250 200 C260 180 255 160 235 150'/%3E%3Ccircle cx='200' cy='150' r='6' fill='%23454F3D'/%3E%3C/g%3E%3C/svg%3E"
+                 alt="Gel Nettoyant Doux Nutravie 120ml, nettoyant visage naturel pour tous types de peau, Maroc"
+                 class="w-full h-full object-cover" loading="lazy" width="400" height="500">
+          </div>
+          <div class="flex flex-col flex-1 p-6 gap-3">
+            <p class="text-[11px] uppercase tracking-[0.18em] text-clay font-medium">Tous types de peau</p>
+            <h3 class="font-display text-xl text-ink">Gel Nettoyant Doux <span class="text-ink-soft text-base font-body">120ml</span></h3>
+            <p class="text-sm text-ink-soft leading-relaxed flex-1">Nettoie en douceur sans dessécher. Élimine impuretés et résidus de maquillage tout en préservant la barrière cutanée.</p>
+            <p class="font-display text-lg text-moss">109 DH</p>
+            <div class="flex flex-col sm:flex-row gap-2 pt-1">
+              <button type="button" onclick="addToCartToast('Gel Nettoyant Doux 120ml')"
+                      class="flex-1 inline-flex items-center justify-center gap-2 border border-moss text-moss text-xs uppercase tracking-wide py-3 px-3 hover:bg-moss hover:text-white transition-colors">
+                <i data-lucide="shopping-bag" class="w-4 h-4"></i> Ajouter au panier
+              </button>
+              <a href="https://wa.me/212708502263?text=Bonjour%20Nutravie%2C%20je%20souhaite%20commander%20%3A%20Gel%20Nettoyant%20Doux%20120ml%20-%20109%20DH.%20Merci%20%21"
+                 target="_blank" rel="noopener"
+                 class="flex-1 inline-flex items-center justify-center gap-2 bg-whats text-white text-xs uppercase tracking-wide py-3 px-3 hover:bg-whats-dark transition-colors">
+                <i data-lucide="message-circle" class="w-4 h-4"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUIT: Écran Solaire Minéral SPF50+ -->
+        <article id="prod-ecran-solaire" class="flex flex-col bg-white border border-sand-300">
+          <!-- Remplacer ce visuel par : ecran-solaire-mineral-spf50.jpg -->
+          <div class="relative aspect-[4/5] bg-sand-200 border-b border-sand-300 overflow-hidden">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23EFE6D6'/%3E%3Cg stroke='%23454F3D' stroke-width='2' fill='none' stroke-linecap='round'%3E%3Ccircle cx='200' cy='190' r='45'/%3E%3Cpath d='M200 110v25M200 235v25M120 190h25M255 190h25M147 137l18 18M253 137l-18 18M147 243l18-18M253 243l-18 18'/%3E%3C/g%3E%3C/svg%3E"
+                 alt="Écran Solaire Minéral SPF50+ Nutravie 50ml, crème solaire hydratante visage, Maroc"
+                 class="w-full h-full object-cover" loading="lazy" width="400" height="500">
+          </div>
+          <div class="flex flex-col flex-1 p-6 gap-3">
+            <p class="text-[11px] uppercase tracking-[0.18em] text-clay font-medium">Tous types de peau · Usage quotidien</p>
+            <h3 class="font-display text-xl text-ink">Écran Solaire Minéral SPF50+ <span class="text-ink-soft text-base font-body">50ml</span></h3>
+            <p class="text-sm text-ink-soft leading-relaxed flex-1">Protection minérale SPF50+ à double action&nbsp;: hydrate et protège des rayons UV en une seule étape.</p>
+            <p class="font-display text-lg text-moss">149 DH</p>
+            <div class="flex flex-col sm:flex-row gap-2 pt-1">
+              <button type="button" onclick="addToCartToast('Écran Solaire Minéral SPF50+ 50ml')"
+                      class="flex-1 inline-flex items-center justify-center gap-2 border border-moss text-moss text-xs uppercase tracking-wide py-3 px-3 hover:bg-moss hover:text-white transition-colors">
+                <i data-lucide="shopping-bag" class="w-4 h-4"></i> Ajouter au panier
+              </button>
+              <a href="https://wa.me/212708502263?text=Bonjour%20Nutravie%2C%20je%20souhaite%20commander%20%3A%20%C3%89cran%20Solaire%20Min%C3%A9ral%20SPF50%2B%2050ml%20-%20149%20DH.%20Merci%20%21"
+                 target="_blank" rel="noopener"
+                 class="flex-1 inline-flex items-center justify-center gap-2 bg-whats text-white text-xs uppercase tracking-wide py-3 px-3 hover:bg-whats-dark transition-colors">
+                <i data-lucide="message-circle" class="w-4 h-4"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUIT: Crème de Nuit -->
+        <article id="prod-creme-nuit" class="flex flex-col bg-white border border-sand-300">
+          <!-- Remplacer ce visuel par : creme-de-nuit.jpg -->
+          <div class="relative aspect-[4/5] bg-sand-200 border-b border-sand-300 overflow-hidden">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23EFE6D6'/%3E%3Cpath d='M225 130a85 85 0 1 0 60 100 70 70 0 0 1-60-100Z' fill='none' stroke='%23454F3D' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+                 alt="Crème de Nuit Nutravie 50ml, soin réparateur nuit naturel pour le visage, Maroc"
+                 class="w-full h-full object-cover" loading="lazy" width="400" height="500">
+          </div>
+          <div class="flex flex-col flex-1 p-6 gap-3">
+            <p class="text-[11px] uppercase tracking-[0.18em] text-clay font-medium">Peaux sèches à normales</p>
+            <h3 class="font-display text-xl text-ink">Crème de Nuit <span class="text-ink-soft text-base font-body">50ml</span></h3>
+            <p class="text-sm text-ink-soft leading-relaxed flex-1">Soin réparateur nocturne riche en actifs botaniques. Nourrit en profondeur pendant le cycle naturel de régénération de la peau.</p>
+            <p class="font-display text-lg text-moss">89 DH</p>
+            <div class="flex flex-col sm:flex-row gap-2 pt-1">
+              <button type="button" onclick="addToCartToast('Crème de Nuit 50ml')"
+                      class="flex-1 inline-flex items-center justify-center gap-2 border border-moss text-moss text-xs uppercase tracking-wide py-3 px-3 hover:bg-moss hover:text-white transition-colors">
+                <i data-lucide="shopping-bag" class="w-4 h-4"></i> Ajouter au panier
+              </button>
+              <a href="https://wa.me/212708502263?text=Bonjour%20Nutravie%2C%20je%20souhaite%20commander%20%3A%20Cr%C3%A8me%20de%20Nuit%2050ml%20-%2089%20DH.%20Merci%20%21"
+                 target="_blank" rel="noopener"
+                 class="flex-1 inline-flex items-center justify-center gap-2 bg-whats text-white text-xs uppercase tracking-wide py-3 px-3 hover:bg-whats-dark transition-colors">
+                <i data-lucide="message-circle" class="w-4 h-4"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== SOINS CHEVEUX =================== -->
+  <section id="cheveux" class="py-20 sm:py-28 bg-sand-50 border-y border-sand-300">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+      <div class="relative mb-14">
+        <span class="ghost-number absolute -left-2 sm:-left-4 -top-10 sm:-top-16 text-[6rem] sm:text-[9rem] select-none" aria-hidden="true">02</span>
+        <div class="relative z-10">
+          <p class="text-xs uppercase tracking-[0.25em] text-clay font-medium mb-3">N°02 — Catalogue Nutravie</p>
+          <h2 class="font-display text-3xl sm:text-4xl text-ink">Soins Cheveux</h2>
+          <p class="text-ink-soft mt-3 max-w-xl">Une huile concentrée pour stimuler la croissance et fortifier la fibre capillaire, du cuir chevelu aux pointes.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- PRODUIT: Huile Boost Croissance -->
+        <article id="prod-huile-croissance" class="flex flex-col bg-white border border-sand-300">
+          <!-- Remplacer ce visuel par : huile-boost-croissance.jpg -->
+          <div class="relative aspect-[4/5] bg-sand-200 border-b border-sand-300 overflow-hidden">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23EFE6D6'/%3E%3Cpath d='M200 350c-50-30-50-90-30-140 10 50 40 70 30 140Z' fill='none' stroke='%23454F3D' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M200 350c50-30 50-90 30-140-10 50-40 70-30 140Z' fill='none' stroke='%23454F3D' stroke-width='2' stroke-linejoin='round'/%3E%3Cline x1='200' y1='350' x2='200' y2='390' stroke='%23454F3D' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E"
+                 alt="Huile Boost Croissance Nutravie 30ml, huile naturelle stimulante pour cheveux, Maroc"
+                 class="w-full h-full object-cover" loading="lazy" width="400" height="500">
+          </div>
+          <div class="flex flex-col flex-1 p-6 gap-3">
+            <p class="text-[11px] uppercase tracking-[0.18em] text-clay font-medium">Tous types de cheveux</p>
+            <h3 class="font-display text-xl text-ink">Huile Boost Croissance <span class="text-ink-soft text-base font-body">30ml</span></h3>
+            <p class="text-sm text-ink-soft leading-relaxed flex-1">Stimule la croissance, fortifie la fibre capillaire et apaise le cuir chevelu grâce à un complexe d'huiles végétales.</p>
+            <p class="font-display text-lg text-moss">75 DH</p>
+            <div class="flex flex-col sm:flex-row gap-2 pt-1">
+              <button type="button" onclick="addToCartToast('Huile Boost Croissance 30ml')"
+                      class="flex-1 inline-flex items-center justify-center gap-2 border border-moss text-moss text-xs uppercase tracking-wide py-3 px-3 hover:bg-moss hover:text-white transition-colors">
+                <i data-lucide="shopping-bag" class="w-4 h-4"></i> Ajouter au panier
+              </button>
+              <a href="https://wa.me/212708502263?text=Bonjour%20Nutravie%2C%20je%20souhaite%20commander%20%3A%20Huile%20Boost%20Croissance%2030ml%20-%2075%20DH.%20Merci%20%21"
+                 target="_blank" rel="noopener"
+                 class="flex-1 inline-flex items-center justify-center gap-2 bg-whats text-white text-xs uppercase tracking-wide py-3 px-3 hover:bg-whats-dark transition-colors">
+                <i data-lucide="message-circle" class="w-4 h-4"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== SOINS CORPS =================== -->
+  <section id="corps" class="py-20 sm:py-28">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+      <div class="relative mb-14">
+        <span class="ghost-number absolute -left-2 sm:-left-4 -top-10 sm:-top-16 text-[6rem] sm:text-[9rem] select-none" aria-hidden="true">03</span>
+        <div class="relative z-10">
+          <p class="text-xs uppercase tracking-[0.25em] text-clay font-medium mb-3">N°03 — Catalogue Nutravie</p>
+          <h2 class="font-display text-3xl sm:text-4xl text-ink">Soins Corps</h2>
+          <p class="text-ink-soft mt-3 max-w-xl">Un déodorant en baume, doux pour les peaux sensibles, sans bicarbonate irritant.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- PRODUIT: Déodorant Baume Vanille -->
+        <article id="prod-deodorant-vanille" class="flex flex-col bg-white border border-sand-300">
+          <!-- Remplacer ce visuel par : deodorant-baume-vanille.jpg -->
+          <div class="relative aspect-[4/5] bg-sand-200 border-b border-sand-300 overflow-hidden">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23EFE6D6'/%3E%3Crect x='160' y='190' width='80' height='150' rx='10' fill='none' stroke='%23454F3D' stroke-width='2'/%3E%3Crect x='178' y='160' width='44' height='35' rx='6' fill='none' stroke='%23454F3D' stroke-width='2'/%3E%3C/svg%3E"
+                 alt="Déodorant Baume Vanille Nutravie 50g, déodorant naturel sans bicarbonate, Maroc"
+                 class="w-full h-full object-cover" loading="lazy" width="400" height="500">
+          </div>
+          <div class="flex flex-col flex-1 p-6 gap-3">
+            <p class="text-[11px] uppercase tracking-[0.18em] text-clay font-medium">Tous types de peau · Peaux sensibles</p>
+            <h3 class="font-display text-xl text-ink">Déodorant Baume Vanille <span class="text-ink-soft text-base font-body">50g</span></h3>
+            <p class="text-sm text-ink-soft leading-relaxed flex-1">Neutralise les odeurs sans bloquer la transpiration. Formule baume à la vanille, douce et sans bicarbonate irritant.</p>
+            <p class="font-display text-lg text-moss">82 DH</p>
+            <div class="flex flex-col sm:flex-row gap-2 pt-1">
+              <button type="button" onclick="addToCartToast('Déodorant Baume Vanille 50g')"
+                      class="flex-1 inline-flex items-center justify-center gap-2 border border-moss text-moss text-xs uppercase tracking-wide py-3 px-3 hover:bg-moss hover:text-white transition-colors">
+                <i data-lucide="shopping-bag" class="w-4 h-4"></i> Ajouter au panier
+              </button>
+              <a href="https://wa.me/212708502263?text=Bonjour%20Nutravie%2C%20je%20souhaite%20commander%20%3A%20D%C3%A9odorant%20Baume%20Vanille%2050g%20-%2082%20DH.%20Merci%20%21"
+                 target="_blank" rel="noopener"
+                 class="flex-1 inline-flex items-center justify-center gap-2 bg-whats text-white text-xs uppercase tracking-wide py-3 px-3 hover:bg-whats-dark transition-colors">
+                <i data-lucide="message-circle" class="w-4 h-4"></i> Commander
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== LE RITUEL (Routine Builder) =================== -->
+  <section id="rituel" class="py-20 sm:py-28 bg-sand-50 border-t border-sand-300">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8">
+
+      <div class="relative mb-16">
+        <span class="ghost-number absolute -left-2 sm:-left-4 -top-10 sm:-top-16 text-[6rem] sm:text-[9rem] select-none" aria-hidden="true">04</span>
+        <div class="relative z-10 text-center sm:text-left">
+          <p class="text-xs uppercase tracking-[0.25em] text-clay font-medium mb-3">N°04 — Catalogue Nutravie</p>
+          <h2 class="font-display text-3xl sm:text-4xl text-ink">Construisez Votre Rituel</h2>
+          <p class="text-ink-soft mt-3 max-w-xl mx-auto sm:mx-0">Trois gestes, dans l'ordre, pour une routine de soin visage complète&nbsp;: nettoyer, hydrater et protéger, puis réparer pendant la nuit.</p>
+        </div>
+      </div>
+
+      <ol class="relative space-y-14">
+        <div class="hidden sm:block absolute left-[27px] top-2 bottom-2 ritual-line" aria-hidden="true"></div>
+
+        <!-- ETAPE 1 : Nettoyer -->
+        <li class="relative sm:pl-20">
+          <div class="hidden sm:flex absolute left-0 top-0 w-14 h-14 rounded-full bg-moss text-sand-50 font-display text-xl items-center justify-center">1</div>
+          <div class="flex sm:hidden items-center gap-3 mb-4">
+            <span class="w-9 h-9 rounded-full bg-moss text-sand-50 font-display text-base flex items-center justify-center">1</span>
+            <p class="text-xs uppercase tracking-[0.2em] text-clay font-medium">Étape 1</p>
+          </div>
+          <h3 class="font-display text-2xl text-ink mb-2">Nettoyer</h3>
+          <p class="text-ink-soft leading-relaxed mb-6 max-w-2xl">Matin et soir, un nettoyage en douceur prépare la peau à recevoir les soins suivants, sans casser sa barrière naturelle.</p>
+
+          <article class="flex flex-col sm:flex-row bg-white border border-sand-300 max-w-2xl">
+            <div class="relative w-full sm:w-40 aspect-[4/5] sm:aspect-auto sm:h-auto bg-sand-200 border-b sm:border-b-0 sm:border-r border-sand-300 overflow-hidden flex-shrink-0">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23EFE6D6'/%3E%3Cg stroke='%23454F3D' stroke-width='2' fill='none' stroke-linecap='round'%3E%3Cpath d='M200 380 C200 300 170 260 150 220'/%3E%3Cpath d='M200 360 C200 280 230 240 250 200'/%3E%3C/g%3E%3C/svg%3E"
+                   alt="Gel Nettoyant Doux Nutravie, étape 1 du rituel de soin visage, Maroc"
+                   class="w-full h-full object-cover" loading="lazy" width="400" height="500">
+            </div>
+            <div class="flex flex-col flex-1 p-5 gap-2">
+              <h4 class="font-display text-lg text-ink">Gel Nettoyant Doux <span class="text-ink-soft text-sm font-body">120ml</span></h4>
+              <p class="font-display text-base text-moss">109 DH</p>
+              <div class="flex flex-col sm:flex-row gap-2 pt-2 mt-auto">
+                <button type="button" onclick="addToCartToast('Gel Nettoyant Doux 120ml')"
+                        class="flex-1 inline-flex items-center justify-center gap-2 border border-moss text-moss text-xs uppercase tracking-wide py-2.5 px-3 hover:bg-moss hover:text-white transition-colors">
+                  <i data-lucide="shopping-bag" class="w-4 h-4"></i> Panier
+                </button>
+                <a href="https://wa.me/212708502263?text=Bonjour%20Nutravie%2C%20je%20souhaite%20commander%20%3A%20Gel%20Nettoyant%20Doux%20120ml%20-%20109%20DH.%20Merci%20%21"
+                   target="_blank" rel="noopener"
+                   class="flex-1 inline-flex items-center justify-center gap-2 bg-whats text-white text-xs uppercase tracking-wide py-2.5 px-3 hover:bg-whats-dark transition-colors">
+                  <i data-lucide="message-circle" class="w-4 h-4"></i> Commander
+                </a>
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <!-- ETAPE 2 : Hydrater & Protéger -->
+        <li class="relative sm:pl-20">
+          <div class="hidden sm:flex absolute left-0 top-0 w-14 h-14 rounded-full bg-moss text-sand-50 font-display text-xl items-center justify-center">2</div>
+          <div class="flex sm:hidden items-center gap-3 mb-4">
+            <span class="w-9 h-9 rounded-full bg-moss text-sand-50 font-display text-base flex items-center justify-center">2</span>
+            <p class="text-xs uppercase tracking-[0.2em] text-clay font-medium">Étape 2</p>
+          </div>
+          <h3 class="font-display text-2xl text-ink mb-2">Hydrater &amp; Protéger</h3>
+          <p class="text-ink-soft leading-relaxed mb-6 max-w-2xl">Le matin, une seule étape suffit&nbsp;: notre écran solaire minéral agit aussi comme crème hydratante, pour un geste rapide et complet.</p>
+
+          <article class="flex flex-col sm:flex-row bg-white border border-sand-300 max-w-2xl">
+            <div class="relative w-full sm:w-40 aspect-[4/5] sm:aspect-auto sm:h-auto bg-sand-200 border-b sm:border-b-0 sm:border-r border-sand-300 overflow-hidden flex-shrink-0">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23EFE6D6'/%3E%3Cg stroke='%23454F3D' stroke-width='2' fill='none' stroke-linecap='round'%3E%3Ccircle cx='200' cy='250' r='45'/%3E%3Cpath d='M200 170v25M200 295v25M120 250h25M255 250h25'/%3E%3C/g%3E%3C/svg%3E"
+                   alt="Écran Solaire Minéral SPF50+ Nutravie, étape 2 du rituel hydratant et protecteur, Maroc"
+                   class="w-full h-full object-cover" loading="lazy" width="400" height="500">
+            </div>
+            <div class="flex flex-col flex-1 p-5 gap-2">
+              <h4 class="font-display text-lg text-ink">Écran Solaire Minéral SPF50+ <span class="text-ink-soft text-sm font-body">50ml</span></h4>
+              <p class="text-xs text-ink-soft -mt-1">Action double : hydratation + protection UV</p>
+              <p class="font-display text-base text-moss">149 DH</p>
+              <div class="flex flex-col sm:flex-row gap-2 pt-2 mt-auto">
+                <button type="button" onclick="addToCartToast('Écran Solaire Minéral SPF50+ 50ml')"
+                        class="flex-1 inline-flex items-center justify-center gap-2 border border-moss text-moss text-xs uppercase tracking-wide py-2.5 px-3 hover:bg-moss hover:text-white transition-colors">
+                  <i data-lucide="shopping-bag" class="w-4 h-4"></i> Panier
+                </button>
+                <a href="https://wa.me/212708502263?text=Bonjour%20Nutravie%2C%20je%20souhaite%20commander%20%3A%20%C3%89cran%20Solaire%20Min%C3%A9ral%20SPF50%2B%2050ml%20-%20149%20DH.%20Merci%20%21"
+                   target="_blank" rel="noopener"
+                   class="flex-1 inline-flex items-center justify-center gap-2 bg-whats text-white text-xs uppercase tracking-wide py-2.5 px-3 hover:bg-whats-dark transition-colors">
+                  <i data-lucide="message-circle" class="w-4 h-4"></i> Commander
+                </a>
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <!-- ETAPE 3 : Réparer la nuit -->
+        <li class="relative sm:pl-20">
+          <div class="hidden sm:flex absolute left-0 top-0 w-14 h-14 rounded-full bg-moss text-sand-50 font-display text-xl items-center justify-center">3</div>
+          <div class="flex sm:hidden items-center gap-3 mb-4">
+            <span class="w-9 h-9 rounded-full bg-moss text-sand-50 font-display text-base flex items-center justify-center">3</span>
+            <p class="text-xs uppercase tracking-[0.2em] text-clay font-medium">Étape 3</p>
+          </div>
+          <h3 class="font-display text-2xl text-ink mb-2">Réparer la Nuit</h3>
+          <p class="text-ink-soft leading-relaxed mb-6 max-w-2xl">Le soir, la crème de nuit prend le relais pour nourrir la peau pendant qu'elle se régénère naturellement.</p>
+
+          <article class="flex flex-col sm:flex-row bg-white border border-sand-300 max-w-2xl">
+            <div class="relative w-full sm:w-40 aspect-[4/5] sm:aspect-auto sm:h-auto bg-sand-200 border-b sm:border-b-0 sm:border-r border-sand-300 overflow-hidden flex-shrink-0">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23EFE6D6'/%3E%3Cpath d='M225 130a85 85 0 1 0 60 100 70 70 0 0 1-60-100Z' fill='none' stroke='%23454F3D' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+                   alt="Crème de Nuit Nutravie, étape 3 du rituel réparateur du soir, Maroc"
+                   class="w-full h-full object-cover" loading="lazy" width="400" height="500">
+            </div>
+            <div class="flex flex-col flex-1 p-5 gap-2">
+              <h4 class="font-display text-lg text-ink">Crème de Nuit <span class="text-ink-soft text-sm font-body">50ml</span></h4>
+              <p class="font-display text-base text-moss">89 DH</p>
+              <div class="flex flex-col sm:flex-row gap-2 pt-2 mt-auto">
+                <button type="button" onclick="addToCartToast('Crème de Nuit 50ml')"
+                        class="flex-1 inline-flex items-center justify-center gap-2 border border-moss text-moss text-xs uppercase tracking-wide py-2.5 px-3 hover:bg-moss hover:text-white transition-colors">
+                  <i data-lucide="shopping-bag" class="w-4 h-4"></i> Panier
+                </button>
+                <a href="https://wa.me/212708502263?text=Bonjour%20Nutravie%2C%20je%20souhaite%20commander%20%3A%20Cr%C3%A8me%20de%20Nuit%2050ml%20-%2089%20DH.%20Merci%20%21"
+                   target="_blank" rel="noopener"
+                   class="flex-1 inline-flex items-center justify-center gap-2 bg-whats text-white text-xs uppercase tracking-wide py-2.5 px-3 hover:bg-whats-dark transition-colors">
+                  <i data-lucide="message-circle" class="w-4 h-4"></i> Commander
+                </a>
+              </div>
+            </div>
+          </article>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+  <!-- =================== NOTRE HISTOIRE =================== -->
+  <section id="histoire" class="py-20 sm:py-28">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 grid md:grid-cols-12 gap-10 md:gap-14 items-center">
+
+      <div class="md:col-span-5 md:order-2">
+        <!-- Remplacer ce visuel par une photo de l'atelier, des ingrédients ou de la fondatrice/du fondateur : nutravie-histoire.jpg -->
+        <div class="relative aspect-[4/5] bg-sand-200 border border-sand-300 overflow-hidden">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23EFE6D6'/%3E%3Cg stroke='%23454F3D' stroke-width='2' fill='none' stroke-linecap='round'%3E%3Cpath d='M130 380c20-100 60-160 140-220'/%3E%3Ccircle cx='280' cy='150' r='10' fill='%23454F3D'/%3E%3Cpath d='M150 350c40-10 70-30 90-60'/%3E%3C/g%3E%3C/svg%3E"
+               alt="L'histoire de Nutravie, cosmétique botanique marocaine fabriquée avec soin"
+               class="w-full h-full object-cover" loading="lazy" width="400" height="500">
+        </div>
+      </div>
+
+      <div class="md:col-span-7 md:order-1 relative">
+        <span class="ghost-number absolute -left-2 sm:-left-4 -top-10 sm:-top-16 text-[6rem] sm:text-[9rem] select-none" aria-hidden="true">05</span>
+        <div class="relative z-10">
+          <p class="text-xs uppercase tracking-[0.25em] text-clay font-medium mb-3">N°05 — Catalogue Nutravie</p>
+          <h2 class="font-display text-3xl sm:text-4xl text-ink mb-6">Notre Histoire</h2>
+          <!-- TEXTE À PERSONNALISER : remplacez ce paragraphe par votre vraie histoire (qui a créé Nutravie, pourquoi, où sont fabriqués les produits). -->
+          <p class="text-ink-soft leading-relaxed mb-4 max-w-xl">Nutravie est née d'une conviction simple&nbsp;: une routine de soin efficace n'a pas besoin d'être compliquée. Plutôt que de multiplier les références, nous avons choisi de formuler peu de produits, mais de les penser jusqu'au moindre détail.</p>
+          <p class="text-ink-soft leading-relaxed max-w-xl">Chaque soin Nutravie est pensé pour s'intégrer dans un rituel simple, du matin au soir, avec des actifs d'origine végétale et sans ingrédients superflus. Nous restons une marque à taille humaine, joignable directement par WhatsApp pour répondre à vos questions avant et après votre commande.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =================== AVIS CLIENTS =================== -->
+  <!-- IMPORTANT : remplacez les 3 blocs ci-dessous par vos vrais avis clients (nom, note, texte) dès que vous me les transmettez. Ne jamais publier d'avis inventés. -->
+  <section id="avis" class="py-20 sm:py-28 bg-sand-50 border-y border-sand-300">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="text-center mb-14">
+        <p class="text-xs uppercase tracking-[0.25em] text-clay font-medium mb-3">N°06 — Catalogue Nutravie</p>
+        <h2 class="font-display text-3xl sm:text-4xl text-ink">Ce qu'en disent nos clientes et clients</h2>
+        <p class="text-ink-soft mt-3 max-w-xl mx-auto">Des avis vérifiés, recueillis sur WhatsApp, Google et Instagram.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+
+        <article class="bg-white border border-sand-300 p-7 flex flex-col gap-4">
+          <div class="flex gap-0.5 text-clay" aria-label="Note : 5 sur 5">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-ink-soft text-sm leading-relaxed flex-1">« Votre avis client ici — collez le texte exact de l'avis. »</p>
+          <p class="text-sm text-ink font-medium">— Nom du client</p>
+        </article>
+
+        <article class="bg-white border border-sand-300 p-7 flex flex-col gap-4">
+          <div class="flex gap-0.5 text-clay" aria-label="Note : 5 sur 5">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-ink-soft text-sm leading-relaxed flex-1">« Votre avis client ici — collez le texte exact de l'avis. »</p>
+          <p class="text-sm text-ink font-medium">— Nom du client</p>
+        </article>
+
+        <article class="bg-white border border-sand-300 p-7 flex flex-col gap-4">
+          <div class="flex gap-0.5 text-clay" aria-label="Note : 5 sur 5">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-ink-soft text-sm leading-relaxed flex-1">« Votre avis client ici — collez le texte exact de l'avis. »</p>
+          <p class="text-sm text-ink font-medium">— Nom du client</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- =================== FOOTER =================== -->
+<footer id="footer" class="bg-moss text-sand-100">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+    <div>
+      <p class="font-display italic text-2xl text-white mb-4">Nutravie</p>
+      <p class="text-sm text-sand-200 leading-relaxed">Cosmétique botanique marocaine. Soins naturels pour le visage, les cheveux et le corps, livrés partout au Maroc.</p>
+    </div>
+
+    <div>
+      <h2 class="text-xs uppercase tracking-[0.2em] text-clay-light mb-4">Contact</h2>
+      <ul class="space-y-3 text-sm text-sand-200">
+        <li class="flex items-center gap-2">
+          <i data-lucide="message-circle" class="w-4 h-4 flex-shrink-0"></i>
+          <a href="https://wa.me/212708502263" target="_blank" rel="noopener" class="hover:text-white">+212 7 08 50 22 63 (WhatsApp)</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <i data-lucide="mail" class="w-4 h-4 flex-shrink-0"></i>
+          <a href="mailto:nutra.vie88@gmail.com" class="hover:text-white">nutra.vie88@gmail.com</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <i data-lucide="map-pin" class="w-4 h-4 flex-shrink-0"></i>
+          <span>Boutique en ligne — livraison partout au Maroc</span>
+        </li>
+        <li class="flex items-center gap-2">
+          <i data-lucide="wallet" class="w-4 h-4 flex-shrink-0"></i>
+          <span>Paiement à la livraison disponible</span>
+        </li>
+        <li class="flex items-center gap-2">
+          <i data-lucide="truck" class="w-4 h-4 flex-shrink-0"></i>
+          <span>Livraison 24-48h partout au Maroc</span>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="text-xs uppercase tracking-[0.2em] text-clay-light mb-4">Horaires Service Client</h2>
+      <ul class="space-y-2 text-sm text-sand-200">
+        <li>Lundi – Samedi : 9h00 – 19h00</li>
+        <li>Réponse rapide par WhatsApp</li>
+      </ul>
+      <h2 class="text-xs uppercase tracking-[0.2em] text-clay-light mt-6 mb-4">Liens</h2>
+      <ul class="space-y-2 text-sm text-sand-200">
+        <li><a href="#" class="hover:text-white">Politique de Confidentialité</a></li>
+        <li><a href="#" class="hover:text-white">Conditions Générales</a></li>
+        <li><a href="#" class="hover:text-white">Livraison &amp; Retours</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="text-xs uppercase tracking-[0.2em] text-clay-light mb-4">Newsletter</h2>
+      <p class="text-sm text-sand-200 mb-4">Recevez nos nouveautés et offres en avant-première.</p>
+      <form id="newsletter-form" class="flex flex-col gap-2" novalidate>
+        <label for="newsletter-email" class="sr-only">Adresse e-mail</label>
+        <input id="newsletter-email" type="email" required placeholder="Votre e-mail"
+               class="bg-moss-dark border border-white/20 text-sm text-white placeholder-sand-300 px-4 py-3 focus:outline-none focus:border-clay-light">
+        <button type="submit" class="bg-clay text-white text-sm uppercase tracking-wide py-3 hover:bg-clay-light transition-colors">
+          S'inscrire
+        </button>
+      </form>
+      <p id="newsletter-message" class="text-xs text-sand-200 mt-2 hidden">Merci ! Votre inscription est confirmée.</p>
+    </div>
+
+  </div>
+
+  <div class="border-t border-white/10 py-6 text-center text-xs text-sand-300">
+    © 2026 Nutravie. Tous droits réservés.
+  </div>
+</footer>
+
+<!-- =================== FLOATING WHATSAPP BUTTON =================== -->
+<a href="https://wa.me/212708502263?text=Bonjour%20Nutravie%2C%20je%20souhaite%20passer%20une%20commande.%20Pouvez-vous%20m%27aider%20%3F"
+   target="_blank" rel="noopener" aria-label="Discuter avec Nutravie sur WhatsApp"
+   class="whats-float fixed bottom-5 right-5 z-[60] w-14 h-14 rounded-full bg-whats text-white flex items-center justify-center shadow-lg hover:bg-whats-dark transition-colors">
+  <i data-lucide="message-circle" class="w-6 h-6"></i>
+</a>
+
+<!-- =================== TOAST (Add to cart feedback) =================== -->
+<div data-toast id="toast" class="fixed bottom-24 left-1/2 -translate-x-1/2 translate-y-20 opacity-0 bg-ink text-sand-50 text-sm px-5 py-3 max-w-[90vw] sm:max-w-sm text-center z-[60] shadow-lg" role="status" aria-live="polite"></div>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script>
+  lucide.createIcons();
+
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('menu-icon-open');
+  const iconClose = document.getElementById('menu-icon-close');
+  let menuIsOpen = false;
+
+  menuToggle.addEventListener('click', () => {
+    menuIsOpen = !menuIsOpen;
+    menuToggle.setAttribute('aria-expanded', String(menuIsOpen));
+    if (menuIsOpen) {
+      mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+      mobileMenu.style.opacity = '1';
+      iconOpen.classList.add('hidden');
+      iconClose.classList.remove('hidden');
+    } else {
+      mobileMenu.style.maxHeight = '0px';
+      mobileMenu.style.opacity = '0';
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+    }
+  });
+
+  // Close mobile menu after tapping a link
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menuIsOpen = false;
+      mobileMenu.style.maxHeight = '0px';
+      mobileMenu.style.opacity = '0';
+      menuToggle.setAttribute('aria-expanded', 'false');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+    });
+  });
+
+  // Toast helper
+  let toastTimer;
+  function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.style.transform = 'translate(-50%, 0)';
+    toast.style.opacity = '1';
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      toast.style.transform = 'translate(-50%, 5rem)';
+      toast.style.opacity = '0';
+    }, 3200);
+  }
+
+  // "Add to cart" — no cart backend yet, so guide people to the working WhatsApp channel
+  function addToCartToast(productName) {
+    showToast('Panier en ligne bientôt disponible — commandez "' + productName + '" via WhatsApp pour une réponse immédiate.');
+  }
+
+  // Newsletter (front-end only placeholder — connect to a real provider later)
+  const newsletterForm = document.getElementById('newsletter-form');
+  const newsletterMessage = document.getElementById('newsletter-message');
+  newsletterForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    newsletterMessage.classList.remove('hidden');
+    newsletterForm.reset();
+  });
+</script>
+
+</body>
+</html>
