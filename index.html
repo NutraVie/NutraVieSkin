@@ -296,6 +296,13 @@
     </ul>
 
     <div class="flex items-center gap-3">
+      <!-- LANGUAGE SWITCHER BUTTONS -->
+      <div class="flex items-center text-xs font-semibold uppercase tracking-wider text-ink border border-sand-300 rounded px-2 py-1 bg-white/50">
+        <button onclick="translatePage('fr')" class="hover:text-moss transition-colors px-1 text-moss" id="btn-fr">FR</button>
+        <span class="text-sand-400">|</span>
+        <button onclick="translatePage('ar')" class="hover:text-moss transition-colors px-1 text-ink-soft" id="btn-ar">العربية</button>
+      </div>
+
       <!-- PANIER MAIN ICON -->
       <button onclick="toggleCart()" class="relative p-2 text-ink hover:text-moss transition-colors mr-1" aria-label="Ouvrir le panier">
         <i data-lucide="shopping-bag" class="w-6 h-6"></i>
@@ -339,6 +346,9 @@
     </ul>
   </div>
 </header>
+
+<!-- Hidden element required for Google Translate engine -->
+<div id="google_translate_element" class="hidden"></div>
 
 <main id="main">
 
@@ -1239,6 +1249,48 @@
     window.open(`https://wa.me/212708502263?text=${encodedMessage}`, '_blank');
   }
 </script>
+<!-- Google Translate Widget Script -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'fr',
+      includedLanguages: 'fr,ar',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
 
+  function translatePage(lang) {
+    const select = document.querySelector('.goog-te-combo');
+    if (select) {
+      select.value = lang;
+      select.dispatchEvent(new Event('change'));
+    }
+    
+    // Toggle active link styles
+    const btnFr = document.getElementById('btn-fr');
+    const btnAr = document.getElementById('btn-ar');
+    if (lang === 'ar') {
+      btnAr?.classList.add('text-moss');
+      btnAr?.classList.remove('text-ink-soft');
+      btnFr?.classList.remove('text-moss');
+      btnFr?.classList.add('text-ink-soft');
+      document.body.dir = 'rtl';
+    } else {
+      btnFr?.classList.add('text-moss');
+      btnFr?.classList.remove('text-ink-soft');
+      btnAr?.classList.remove('text-moss');
+      btnAr?.classList.add('text-ink-soft');
+      document.body.dir = 'ltr';
+    }
+  }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- CSS to clean up Google Translate UI artifacts -->
+<style>
+  body { top: 0 !important; }
+  .goog-te-banner-frame, .skiptranslate, iframe.goog-te-banner-frame { display: none !important; }
+  .goog-text-highlight { background-color: transparent !important; box-shadow: none !important; }
+</style>
 </body>
 </html>
