@@ -317,6 +317,7 @@ src="https://www.facebook.com/tr?id=28543485895245470&ev=PageView&noscript=1"
 <script>
   document.getElementById('order-form').addEventListener('submit', function(e){
     e.preventDefault();
+fbq('track', 'Lead');
     const name = document.getElementById('f-name').value;
     const phone = document.getElementById('f-phone').value;
     const city = document.getElementById('f-city').value;
